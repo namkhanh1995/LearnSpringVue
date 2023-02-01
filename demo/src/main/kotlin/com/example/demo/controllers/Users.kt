@@ -4,7 +4,7 @@ import com.example.demo.models.User
 import com.example.demo.services.UserService
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
-
+@CrossOrigin(origins = ["http://localhost:5173/"], maxAge = 3600)
 @RestController
 @RequestMapping("/api")
 class Users (
@@ -17,7 +17,7 @@ class Users (
     @PostMapping("/users")
     fun createUser(@RequestBody user:User): User? {
         var id = userService!!.createUser(user)
-        return userService!!.getUser(user.id)
+        return userService.getUser(user.id)
     }
 
     @GetMapping("/users/{id}")
