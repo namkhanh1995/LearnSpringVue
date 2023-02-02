@@ -45,9 +45,12 @@ export default {
   },
   methods:{
     submitForm(){
+      this.$router.push('http://localhost:5173/#/');
       axios.post('http://localhost:8080/api/users', this.form)
           .then((res) => {
             //Perform Success Action
+
+
           })
           .catch((error) => {
             // error.response.status Check status code

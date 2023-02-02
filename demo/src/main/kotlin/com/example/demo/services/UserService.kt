@@ -19,7 +19,7 @@ class UserService (
         return userRepository!!.findById(id)
     }
 
-    fun deleteUser(id:Long):Int?{
+    fun deleteUser(id:Long?){
         return userRepository!!.deleteById(id)
     }
     fun updateUser(user:User):Int?{

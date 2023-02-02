@@ -25,6 +25,9 @@ class Users (
         val user = userService!!.getUser(id)
         return ResponseEntity.ok(user)
     }
-
+    @DeleteMapping("/users/{id}")
+    fun deleteUser(@PathVariable id: Long?) {
+        userService!!.deleteUser(id)
+    }
 
 }

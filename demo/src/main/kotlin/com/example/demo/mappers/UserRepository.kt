@@ -17,7 +17,7 @@ interface UserRepository {
     fun findById(id: Long?): User?
 
     @Delete("DELETE FROM users WHERE id = #{id}")
-    fun deleteById(id: Long): Int
+    fun deleteById(id: Long?)
     @Update(
             "Update users set firstName=#{firstName}, " +
                     " lastName=#{lastName}, emailId=#{emailId} where id=#{id}"

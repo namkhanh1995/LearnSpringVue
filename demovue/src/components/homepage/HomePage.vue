@@ -1,4 +1,5 @@
 <template>
+
   <header>
     <div class="wrapper">
       <a href="#/">User</a> |
