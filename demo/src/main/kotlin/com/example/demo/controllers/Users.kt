@@ -4,7 +4,7 @@ import com.example.demo.models.User
 import com.example.demo.services.UserService
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
-@CrossOrigin(origins = ["http://localhost:5173/"], maxAge = 3600)
+@CrossOrigin(origins = ["http://localhost:3000/"], maxAge = 3600)
 @RestController
 @RequestMapping("/api")
 class Users (
