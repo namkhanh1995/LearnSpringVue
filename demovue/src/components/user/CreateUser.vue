@@ -45,7 +45,8 @@ export default {
   },
   methods:{
     submitForm(){
-      this.$router.push('http://localhost:5173/#/');
+      // this.$router.push('http://localhost:5173/');
+      this.$router.push('/')
       axios.post('http://localhost:8080/api/users', this.form)
           .then((res) => {
             //Perform Success Action
