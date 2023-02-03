@@ -29,5 +29,8 @@ class Users (
     fun deleteUser(@PathVariable id: Long?) {
         userService!!.deleteUser(id)
     }
-
+    @PutMapping("/users/{id}")
+    fun updateUser(@RequestBody user:User) {
+        userService!!.updateUser(user)
+    }
 }

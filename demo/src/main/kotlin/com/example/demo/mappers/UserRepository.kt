@@ -8,10 +8,6 @@ interface UserRepository {
     @Select("select * from users")
     fun findAll(): List<User>
 
-//    @Insert(
-//            "INSERT INTO users(id, firstName, lastName,emailId) " +
-//                    " VALUES (#{id}, #{firstName}, #{lastName}, #{emailId})"
-//    )
     @Insert(
         "INSERT INTO users(firstName, lastName,emailId) " +
                 " VALUES ( #{firstName}, #{lastName}, #{emailId})"
